@@ -1,0 +1,62 @@
+.desert {
+  width: 1000px;
+  height: 200px;
+  background-image: url('desert.png');
+  background-repeat: repeat-x;
+  animation: slideright 600s infinite linear;
+  -webkit-animation: slideright 600s infinite linear;
+}
+#dino {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 140px;
+  background-image: url(dino.png);
+  
+}
+#cactus {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 80px;
+  background-image: url(cactus.png);
+  animation: movement 1.5s infinite linear;
+}
+.jump {
+  animation: jump 0.5s linear;
+}
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+@-webkit-keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+@keyframes movement {
+  0% {
+    left: 980px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+@keyframes jump {
+  0% {
+    top: 140px;
+  }
+  50% {
+    top: 70px;
+  }
+  100% {
+    top: 140px;
+  }
+}
